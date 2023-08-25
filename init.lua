@@ -5,10 +5,12 @@ local autocmd = vim.api.nvim_create_autocmd
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-vim.opt.guifont = { "MesloLGS NF", ":h16"}
+vim.opt.guifont = { "MesloLGS NF", ":h15"}
 vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 0
 vim.o.shiftwidth = 4
 vim.o.smartindent = true
-
+vim.o.swapfile = false
+vim.o.scrolloff = 8
+vim.o.wrap = false

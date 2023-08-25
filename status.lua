@@ -1,4 +1,4 @@
--- custom/abc.lua must return a table
+-- custom/status.lua must return a table
 
 local st_modules = require "nvchad_ui.statusline.modules"
 

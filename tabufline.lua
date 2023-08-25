@@ -1,4 +1,4 @@
--- custom/xyz.lua be like 
+-- custom/tabufline.lua be like 
 -- must return a table!
 
 local tabufline_modules = require "nvchad_ui.tabufline.modules"

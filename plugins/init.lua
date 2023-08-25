@@ -26,7 +26,7 @@ return {
       ["NvChad/ui"] = {
         override_options = {
           statusline = {
-            separator_style = "default",
+            separator_style = "arrow", -- default, round, block, arrow
             overriden_modules = function()
               return require "custom.status"
             end,
@@ -79,6 +79,10 @@ return {
             require "custom.plugins.null-ls"
         end,
     },
+
+    -- arduino tools
+    ["sudar/vim-arduino-syntax"] = {},
+    ["sudar/vim-arduino-snippets"] = {},
    -- Override plugin config if it has a module called
    -- If you wish to call a module, which is 'cmp' in this case
   --  ["hrsh7th/nvim-cmp"] = {
