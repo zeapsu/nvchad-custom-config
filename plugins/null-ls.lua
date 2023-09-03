@@ -21,7 +21,7 @@ local sources = {
 
     -- cpp
     -- canceling for now since we are running ccls for LSP 
-    -- b.formatting.clang_format, 
+    -- b.formatting.clang_format,
     b.formatting.rustfmt,
 }
 
