@@ -19,5 +19,11 @@ M.toggleterm = {
     },
 }
 -- more keybinds!
+M.copilot = {
+    i = {
+        ["<C-a>"] = { "<cmd> copilot#Accept() <CR>", opts = { silent=true, expr=true, script = true } }
+    },
+}
+
 
 return M
