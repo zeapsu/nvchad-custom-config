@@ -83,9 +83,17 @@ return {
     -- arduino tools
     ["sudar/vim-arduino-syntax"] = {},
     ["sudar/vim-arduino-snippets"] = {},
+    ["normen/vim-pio"] = {},
 
     -- md file renderer
     ["instant-markdown/vim-instant-markdown"] = {},
+
+
+
+
+
+
+
    -- Override plugin config if it has a module called
    -- If you wish to call a module, which is 'cmp' in this case
   --  ["hrsh7th/nvim-cmp"] = {
