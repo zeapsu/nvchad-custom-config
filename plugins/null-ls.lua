@@ -8,20 +8,21 @@ local b = null_ls.builtins
 
 local sources = {
 
-  -- webdev stuff
-  b.formatting.deno_fmt,
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } },
+    -- webdev stuff
+    b.formatting.deno_fmt,
+    b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } },
 
-  -- Lua
-  b.formatting.stylua,
+    -- Lua
+    b.formatting.stylua,
 
-  -- Shell
-  b.formatting.shfmt,
-  b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+    -- Shell
+    b.formatting.shfmt,
+    b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
-  -- cpp
-  b.formatting.clang_format,
-  b.formatting.rustfmt,
+    -- cpp
+    -- canceling for now since we are running ccls for LSP 
+    -- b.formatting.clang_format, 
+    b.formatting.rustfmt,
 }
 
 null_ls.setup {
