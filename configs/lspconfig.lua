@@ -1,6 +1,7 @@
 -- custom.plugins.lspconfig
-local on_attach = require("plugins.configs.lspconfig").on_attach
-local capabilities = require("plugins.configs.lspconfig").capabilities
+local configs = require("plugins.configs.lspconfig")
+local on_attach = configs.on_attach
+local capabilities = configs.capabilities
 
 ---@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"

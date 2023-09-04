@@ -5,7 +5,8 @@ local autocmd = vim.api.nvim_create_autocmd
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-vim.opt.guifont = { "MesloLGS NF", ":h15"}
+
+-- vim.opt.guifont = { "MesloLGS NF", ":h15"} -- uncomment if using neovide again
 vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 0
