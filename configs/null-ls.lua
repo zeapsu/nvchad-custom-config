@@ -19,8 +19,6 @@ local sources = {
         formatting.shfmt,
         lint.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
-        lint.spellcheck,
-
         -- cpp
         -- canceling for now since we are running ccls for LSP 
         -- b.formatting.clang_format,

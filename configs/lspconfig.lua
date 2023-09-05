@@ -5,7 +5,7 @@ local capabilities = configs.capabilities
 
 ---@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "lua_ls", "pyright"}
+local servers = { "html", "cssls", "pyright"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -41,3 +41,15 @@ lspconfig["ccls"].setup({
   root_dir = require("lspconfig/util").root_pattern("compile_commands.json", ".ccls", ".git"),
 })
 
+lspconfig.lua_ls.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                -- Get the Language server to recognize the 'vim' global
+                globals = { 'vim' },
+            }
+        }
+    },
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
