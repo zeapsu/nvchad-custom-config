@@ -54,7 +54,8 @@ local plugins = {
     -- arduino tools
     { "sudar/vim-arduino-syntax" },
     { "sudar/vim-arduino-snippets"},
-    { "normen/vim-pio" },
+    { "normen/vim-pio", lazy = false },
+    { "github/copilot.vim", lazy = false},
 
     -- md file renderer
     { "instant-markdown/vim-instant-markdown" },
