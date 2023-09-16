@@ -58,7 +58,7 @@ local plugins = {
     { "github/copilot.vim", lazy = false},
 
     -- md file renderer
-    { "instant-markdown/vim-instant-markdown" },
+    { "instant-markdown/vim-instant-markdown", lazy = false },
 }
 
 return plugins
