@@ -57,6 +57,9 @@ local plugins = {
     { "normen/vim-pio", lazy = false },
     { "github/copilot.vim", lazy = false},
 
+    -- tex tools
+    { "lervag/vimtex", lazy = false},
+
     -- md file renderer
     { "instant-markdown/vim-instant-markdown", lazy = false },
 }

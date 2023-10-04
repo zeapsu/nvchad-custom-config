@@ -16,6 +16,10 @@ vim.o.swapfile = false
 vim.o.scrolloff = 8
 vim.o.wrap = false
 
+-- vimtex
+vim.g.vimtex_view_method = 'skim'
+vim.g.vimtex_compiler_method = 'latexrun'
+
 -- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 -- vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
 -- vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next()', { silent = true, expr = true })

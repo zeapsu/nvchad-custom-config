@@ -5,7 +5,7 @@ local capabilities = configs.capabilities
 
 ---@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "pyright"}
+local servers = { "html", "cssls", "pyright", "ltex", "texlab"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
