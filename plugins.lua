@@ -58,7 +58,20 @@ local plugins = {
     { "github/copilot.vim", lazy = false},
 
     -- tex tools
-    { "lervag/vimtex", lazy = false},
+    { "lervag/vimtex", lazy = false },
+    { "KeitaNakamura/tex-conceal.vim", lazy = false },
+    { "matze/vim-tex-fold", lazy = false },
+    { "mattn/emmet-vim", lazy = false },
+    {
+        "iurimateus/luasnip-latex-snippets.nvim",
+        -- vimtex isn't required if using treesitter
+        requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+        config = function()
+            require'luasnip-latex-snippets'.setup()
+            -- or setup({ use_treesitter = true })
+            require("luasnip").config.setup { enable_autosnippets = true }
+        end,
+    },
 
     -- md file renderer
     { "instant-markdown/vim-instant-markdown", lazy = false },

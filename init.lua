@@ -5,6 +5,12 @@ autocmd("BufWritePost", {
     pattern = "*.tex",
     command = "VimtexCompile",
 })
+-- vimtex auto compile 
+-- comment if continuous compilation is already working
+-- autocmd("BufWritePost", {
+--     pattern = "*.tex",
+--     command = "VimtexCompile",
+-- })
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
@@ -21,8 +27,12 @@ vim.o.scrolloff = 8
 vim.o.wrap = false
 
 -- vimtex
-vim.g.vimtex_view_method = 'skim'
-vim.g.vimtex_compiler_method = 'latexrun'
+vim.g.vimtex_view_method = 'sioyek'
+vim.g.vimtex_compiler_method = 'latexmk'
+vim.g.tex_flavor = 'latex'
+vim.g.vimtex_quickfix_mode= 0
+vim.o.conceallevel = 2
+vim.g.tex_conceal= 'abdmg'
 
 -- vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 -- vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
