@@ -1,7 +1,8 @@
 local plugins = {
     {
         "Pocco81/TrueZen.nvim",
-        lazy= false, -- load plugin at start-up
+        -- lazy= false, -- load plugin at start-up
+        event = "BufEnter *.tex"
     },
 
     {
@@ -27,7 +28,7 @@ local plugins = {
     {
         "simrat39/rust-tools.nvim",
         after = "nvim-lspconfig",
-        lazy = false,
+        event = "BufEnter *.rs",
         config = function()
             require "custom.configs.rust-tools"
         end,
@@ -54,13 +55,13 @@ local plugins = {
     -- arduino tools
     { "sudar/vim-arduino-syntax" },
     { "sudar/vim-arduino-snippets"},
-    { "normen/vim-pio", lazy = false },
+    { "normen/vim-pio", cmd = "Piostart" },
     { "github/copilot.vim", lazy = false},
 
     -- tex tools
-    { "lervag/vimtex", lazy = false },
-    { "KeitaNakamura/tex-conceal.vim", lazy = false },
-    { "matze/vim-tex-fold", lazy = false },
+    { "lervag/vimtex", event = "BufEnter *.tex" },
+    { "KeitaNakamura/tex-conceal.vim", event = "BufEnter *.tex" },
+    { "matze/vim-tex-fold", event = "BufEnter *.tex" },
     { "mattn/emmet-vim", lazy = false },
     {
         "iurimateus/luasnip-latex-snippets.nvim",
@@ -74,7 +75,7 @@ local plugins = {
     },
 
     -- md file renderer
-    { "instant-markdown/vim-instant-markdown", lazy = false },
+    { "instant-markdown/vim-instant-markdown", event = "BufEnter *.md" },
 }
 
 return plugins
