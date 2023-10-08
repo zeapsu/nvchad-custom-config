@@ -1,10 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
 
--- vimtex auto compile
-autocmd("BufWritePost", {
-    pattern = "*.tex",
-    command = "VimtexCompile",
-})
 -- vimtex auto compile 
 -- comment if continuous compilation is already working
 -- autocmd("BufWritePost", {
