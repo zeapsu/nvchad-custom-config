@@ -6,7 +6,6 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
 
         lint.eslint,
-        null_ls.builtins.completion.spell,
 
         -- Lua
         formatting.stylua,
